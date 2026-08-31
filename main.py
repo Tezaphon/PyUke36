@@ -24,3 +24,24 @@ elif D>0:
     x2= ( (-b - D**(1/2) )/ 2*a)
     print("Roots are "+str(x1)+" and "+str(x2))
 
+#array of points (x,y)
+
+from dataclasses import dataclass
+
+verticleNumber = int(input("Input amount of verticles for the plotter "))
+
+class verticle:
+    def __init__(self, x):
+        self.x=x
+        self.y=(a*(x**2)+b*x+c)
+
+
+verticles=[]
+
+i=0
+while i<verticleNumber:
+    verticles.append(verticle(i))
+    i+=1
+
+for i in verticles:
+    print(str(i.x) + " | " + str(i.y) )
