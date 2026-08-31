@@ -45,3 +45,15 @@ while i<verticleNumber:
 
 for i in verticles:
     print(str(i.x) + " | " + str(i.y) )
+
+import matplotlib.pyplot as plt
+
+xplot=[]
+for i in verticles:
+    xplot.append(i.x)
+yplot=[]
+for i in verticles:
+    yplot.append(i.y)
+
+plt.plot(xplot, yplot)
+plt.show()
