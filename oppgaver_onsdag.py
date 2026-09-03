@@ -28,4 +28,5 @@ while liv==True:
     elif chosenOption==3:
         index=int(input("Tast inn oppgavens nummer for å fjerne den: "))
         list.pop(index-1)
-    elif chosenOption==9
+    elif chosenOption==9:
+        None
