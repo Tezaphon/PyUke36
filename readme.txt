@@ -1,0 +1,1 @@
+do "pip install colorama" in cmd
