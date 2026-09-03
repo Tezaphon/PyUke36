@@ -9,6 +9,7 @@ def optionCall():
     print("1 for å vise oppgaver i listen")
     print("2 for å legge en oppgave til listen")
     print("3 for å fjerne en oppgave fra listen")
+    print("4 for å finne en oppgave")
     print("0 for å stoppe programmet")
     print("-----------------------------------------")
     x=int(input("Tast en option: "))
@@ -19,6 +20,8 @@ def showList():
     print("-----------------------------------------")
     for i in ledger:
         print(Fore.BLUE+i+Fore.RESET)
+    print("-----------------------------------------")
+    print(Fore.YELLOW+"Tilsammen: "+str(len(ledger))+" oppgaver"+Fore.RESET)
 
 liv=True
 while liv==True:
@@ -40,4 +43,8 @@ while liv==True:
         ledger.pop(index)
         print("-----------------------------------------")
         showList()
+    elif chosenOption==4:
+        query=input(Fore.CYAN+"Skriv inn oppgave å finne: "+Fore.RESET)
+        print("-----------------------------------------")
+        print(Fore.CYAN+"Oppgaven er på plass "+str(ledger.index(query)+1)+Fore.RESET)
 
